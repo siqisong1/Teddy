@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Teedy PMD Metrics Rules"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.github.io/pmd/pmd_ruleset_2_0_0.xsd">
+  <description>
+    PMD ruleset for the Practice 7 metrics: lines of code, cyclomatic complexity,
+    weighted methods per class, coupling between objects, and lack of cohesion.
+  </description>
+
+  <!-- LoC: non-commenting source statements approximate executable lines of code. -->
+  <rule ref="category/java/design.xml/NcssCount"/>
+
+  <!-- CC: cyclomatic complexity. -->
+  <rule ref="category/java/design.xml/CyclomaticComplexity"/>
+
+  <!-- WMC: method-count pressure is the closest standalone PMD rule. -->
+  <rule ref="category/java/design.xml/TooManyMethods"/>
+
+  <!-- CBO: coupling between objects. -->
+  <rule ref="category/java/design.xml/CouplingBetweenObjects"/>
+
+  <!-- LCOM/WMC: GodClass combines high WMC with low class cohesion signals. -->
+  <rule ref="category/java/design.xml/GodClass"/>
+</ruleset>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Teedy PMD Metrics Rules"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.github.io/pmd/pmd_ruleset_2_0_0.xsd">
+  <description>
+    PMD ruleset for the Practice 7
+  </description>
+
+  <!-- LoC -->
+  <rule ref="category/java/design.xml/NcssCount"/>
+
+  <!-- CC -->
+  <rule ref="category/java/design.xml/CyclomaticComplexity"/>
+
+  <!-- WMC -->
+  <rule ref="category/java/design.xml/TooManyMethods"/>
+
+  <!-- CBO -->
+  <rule ref="category/java/design.xml/CouplingBetweenObjects"/>
+
+  <!-- LCOM/WMC -->
+  <rule ref="category/java/design.xml/GodClass"/>
+</ruleset>
