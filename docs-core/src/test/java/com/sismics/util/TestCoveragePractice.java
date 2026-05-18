@@ -8,7 +8,7 @@ import org.junit.Test;
 import java.util.Locale;
 
 /**
- * Extra tests for Practice 8 coverage.
+ * Practice 8 coverage.
  */
 public class TestCoveragePractice {
     @Test

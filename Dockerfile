@@ -13,8 +13,9 @@ ENV JETTY_VERSION 11.0.20
 ENV JETTY_HOME /opt/jetty
 
 # Install packages
-RUN apt-get update && \
-    apt-get -y -q --no-install-recommends install \
+RUN sed -i 's|http://ports.ubuntu.com/ubuntu-ports|http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports|g' /etc/apt/sources.list && \
+    apt-get -o Acquire::Retries=5 update && \
+    apt-get -o Acquire::Retries=5 -y -q --no-install-recommends install \
     vim less procps unzip wget tzdata openjdk-11-jdk \
     ffmpeg \
     mediainfo \
